@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/junaidshakur/greetings"
 )
 
 // simple struct type with method
@@ -87,4 +89,6 @@ func main() {
 	Describe(r1)
 	Describe(ls)
 	fmt.Println("Person Information:", p.String())
+
+	fmt.Println(greetings.Greet("Junaid"))
 }
