@@ -46,25 +46,25 @@ func Describe(s Shaper) {
 
 //sub types
 
-type Person struct {
-	Name string
-	Address
-}
+// type Person struct {
+// 	Name string
+// 	Address
+// }
 
-func (p *Person) String() string {
-	return p.Name + "-" + p.Address.String()
-}
+// func (p *Person) String() string {
+// 	return p.Name + "-" + p.Address.String()
+// }
 
-type Address struct {
-	Street  string
-	City    string
-	Country string
-}
+// type Address struct {
+// 	Street  string
+// 	City    string
+// 	Country string
+// }
 
-func (addr *Address) String() string {
+// func (addr *Address) String() string {
 
-	return addr.Street + "-" + addr.City + "-" + addr.Country
-}
+// 	return addr.Street + "-" + addr.City + "-" + addr.Country
+// }
 
 func main() {
 
@@ -76,19 +76,12 @@ func main() {
 	r2 := &Rect{Width: 8, Height: 59}
 	ls := Rects{*r1, *r2}
 
-	p := &Person{
-		Name: "Junaid",
-		Address: Address{
-			City:    "Lahore",
-			Country: "Pakistan",
-		},
-	}
-
 	fmt.Println("Hello World!")
 	fmt.Println("Add using callback:", callback.Add(5))
 	Describe(r1)
 	Describe(ls)
-	fmt.Println("Person Information:", p.String())
 
 	fmt.Println(greetings.Greet("Junaid"))
+
+	LearnGenerics()
 }
